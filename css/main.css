@@ -9,14 +9,13 @@
 		transition: opacity 1s ease-in-out;
 */
 .portfolio-item {
-	
 	transform-style: preserve-3d;
   	transition: all 1.0s linear;
 }
 
 .portfolio-item:hover {
 	transform: rotateY(180deg);
-	perspective: 1500px;
+	/*perspective: 1500px;*/
 }
 
 .portfolio-item div {
