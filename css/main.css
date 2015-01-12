@@ -8,18 +8,27 @@
 		-webkit-backface-visibility
 		transition: opacity 1s ease-in-out;
 */
-.portfolio-item {
+
+.front, .back{
+	perspective: 1500px;
 	transform-style: preserve-3d;
-  	transition: all 1.0s linear;
+  	transition: all 1s linear;
+  	backface-visibility: hidden;
 }
 
-.portfolio-item:hover {
+.portfolio-item {
+	perspective: 1500px;
+	transform-style: preserve-3d;
+  	transition: all 1s linear;
+}
+
+.portfolio-item:hover .back {
+	transform: rotateY(0);
+}
+
+.portfolio-item:hover .front {
 	transform: rotateY(180deg);
-	/*perspective: 1500px;*/
-}
 
-.portfolio-item div {
-	backface-visibility: hidden;
 }
 
 .front {
@@ -28,9 +37,8 @@
 
 }
 
-
 .back {
 	z-index: 1;
-	position: relative;
+	/*position: relative;*/
 	transform: rotateY(-180deg);
 	}
